@@ -1,0 +1,41 @@
+.ig{
+	float:left;
+	margin-top:200px;
+	margin-left:50px;
+	
+}
+form{
+	border-radius:25px;
+	padding:10px;
+	width:300px;
+	background-color:rgb(252, 217, 61);
+	color:white;
+	margin-top:50px;
+	margin-right:100px;
+	float:right;
+}
+label{
+	padding:5px;
+				
+}
+input{
+	padding:5px;
+	margin:5px;
+	border:none;
+	height:25px;
+	width:275px;
+	background-color:rgba(253, 253, 253, 0.534);
+	color: black;
+}
+button{
+	padding:5px;
+	margin:5px;
+	background-color:white;
+	color:rgba(5, 6, 7, 0.67);
+	border:none;
+	height:35px;
+	width:275px;
+	text-align: center;
+	border-radius: 50px;
+
+}

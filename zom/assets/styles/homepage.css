@@ -1,0 +1,136 @@
+body{
+    margin:0px;
+    border:0px;
+    background-color:#f3f3f3;
+}
+.btn{
+    border:0px;
+    background-color: cornsilk;
+    float: right;
+    height: 30px;
+    margin-right:0px;
+    border-right: 2px;
+    border-left: 2px;
+    border-style: solid;
+    border-color:black;
+}
+.info{
+    width:auto;
+    background-image: url("{% static 'images/homebg1.jpg' %}");
+    height:400px;
+}
+a{
+
+    text-decoration: none;
+    text-align: end;
+}
+a:hover{
+    color: rgb(0, 89, 255);
+    text-decoration: none;
+    
+}
+.btn:hover{
+    background-color: aliceblue;
+}
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-left: 600px;
+    margin-top: 120px;
+}
+.searchbar{
+    border-radius: 15px;
+    height: 30px;
+    border-style: none;
+    margin-left:350px;
+    padding: 0px 0px 0px 2px;
+    margin-top:10px;
+}
+.collections{
+    border: 2px lightgrey solid;
+    width:auto;
+    height: 200px;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.c-1btn{
+    border:0px;
+    background-color: palegoldenrod;
+    height: 190px;
+    margin: 5px 2px 5px 4px;
+    width:155px;
+
+}
+.c-btn{
+    border:0px;
+    background-color: palegoldenrod;
+    height: 190px;
+    margin: 5px 2px;
+    width:158px;
+}
+.recently-visited{
+    margin-left: 50px;
+    float:left;
+    margin-top: 50px;
+    border: 2px lightgrey solid;
+    border-radius:10px;
+    height:auto;
+    width:600px;
+    background-color:white;
+}
+.rcard{
+    margin-top:5px;
+    margin-left:10px;
+    margin-bottom:5px;
+    height: 50px;
+    width:550px;
+    border: 2px solid rgb(245, 231, 105);
+    border-radius:3px;
+}
+.quick-search{
+    margin-right: 50px;
+    float:right;
+    margin-top: 50px;
+    border: 2px lightgrey solid;
+    border-radius:10px;
+    height: 350px;
+    width:500px;
+    background-color:white;
+}
+.rvtext{
+    font-size: 20px;
+    font-family: 'Noto Serif', serif;
+    color: black;
+    margin-top: 8px;
+    margin-left: 3px;
+}
+.qstext{
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+.qs1cat{
+    background-color: white;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 20px;
+    float: left;
+}
+.qscat{
+    background-color: white;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: left;
+}
+.qsimg{
+    width: 70px;
+    height: 70px;
+}

@@ -1,0 +1,37 @@
+h1{
+    color: white;
+    width: auto;
+    text-align: center;
+    align-self: auto;
+    font-family: 'Noto Serif', serif;
+    background-color: black;
+    margin: 0px;
+}
+body{
+	background-image:url("homebg31.jpg");
+}
+.nav-item{
+    margin: 0px;
+    background-color:white;
+    width: auto;
+    padding: 5px;
+    font-size: 30px;
+    font-family: 'Noto Serif', serif;
+    height:35px;
+}
+.logo{
+    float:left;
+    color:black;
+}
+.nav-links{
+    float:right;
+    background-color:rgb(252, 217, 61);
+    text-align: end;
+}
+.nav-item-links{
+    text-align:right;
+    text-decoration: none;
+}
+a{
+    color: black;
+}

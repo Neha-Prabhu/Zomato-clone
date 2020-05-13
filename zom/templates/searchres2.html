@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/searchres.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <title>Search_result</title>
+    <style>
+        .fla{
+            color: black;
+            margin-left:500px;
+        }
+        .nav-bar{
+            width:auto;
+            height:50px;
+            background-color: rgb(245, 231, 105);
+        }
+        .filby{
+            color: black;
+        }
+        .nav-img-button{
+            height: 40px;
+            width: 40px;
+            float: right;
+        }
+        .nav-text-button{
+            height: 40px;
+            width: 70px;
+            float: right;
+            margin-top: 5px;
+            background-color: rgb(245, 241, 189);
+            border-style: none;
+            margin-left: 5px;
+            margin-right:5px;
+            border-radius: 5px;
+        }
+        .nav-text{
+            height: 30px;
+            width: auto;
+            float: left;
+            margin: 0;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .search{
+            height: 40px;
+            float: right;
+            margin-top: 5px;
+            background-color: rgb(245, 241, 189);
+            border-style: none;
+            margin-left: 5px;
+            margin-right:5px;
+        }
+        .quick-search{
+            clear:right;
+            margin-right: 70px;
+            float:right;
+            margin-top: 100px;
+            border: 2px lightgrey solid;
+            border-radius:20px;
+            height: 600px;
+            width:300px;
+            background-color:white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"> 
+        <form class="nav-form" action="searchres" method="POST">
+        {% csrf_token %}        
+            <input class="searchbar" type="text" name="inputvalue" size="75" placeholder="search">
+            <button type="submit" class="search" value="searchval">search</button>
+        </form>    
+        <form action="graph" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="uid" value="{{user.username}}">
+            <button type="submit" class="search" value="searchval"><img class="nav-img-button" src="{% static 'images/graph.png' %}"></button>
+        </form>
+        <form action="homepage" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="uid" value="{{user.username}}">
+            <button class="nav-text-button" type="submit">home</button>
+        </form>           
+    </nav> 
+
+    <div class="quick-search">
+    <p class="qstext">Quick Search</p>
+        <div class="qscat">
+            <a href="#"><img class="qsimg" src="{% static 'images/category_1.png' %}">Delivery</a>
+        </div>
+        <div class="qscat">
+            <a href="breakfast"><img class="qsimg" src="{% static 'images/category_8.png' %}">Breakfast</a>
+        </div>
+        <div class="qscat">
+            <a href="lunch"><img class="qsimg" src="{% static 'images/category_9.png' %}">Lunch</a>
+        </div>
+        <div class="qscat">
+            <a href="dinner"><img class="qsimg" src="{% static 'images/category_10.png' %}">Dinner</a>
+        </div>
+        <div class="qscat">
+            <a href="nlife"><img class="qsimg" src="{% static 'images/category_3.png' %}">Night-Life</a>
+        </div>
+        <div class="qscat">
+            <a href="cafe"><img class="qsimg" src="{% static 'images/category_6.png' %}">Cafe</a>
+        </div>
+    </div>
+    <div class="head">
+        <p class="heading">Restaurants for </p>
+    </div>
+    {% for i in li %}
+    <div class="r-card">
+        <div class="u-div">
+            <div class="d_rating">
+                <p class="rate">{{i.avg_rating}}</p>
+            </div>
+            <p class="name">{{i.name}}</p>
+            <p class="cuisine">{{i.cuisine}}</p>
+            <p class="address1">{{i.area}}</p>
+        </div>
+        <div class="l-div">
+            <p class="address2">{{i.location}}</p>
+            <p class="time">{{i.timings}}</p>
+        </div>
+        <div class="others">
+            <form action="storevisits" method="POST">
+                    {% csrf_token %}
+                <input type="hidden" name="resname" value="{{i.name}}">
+                <input type="hidden" name="visited" value="False">
+                <input type="hidden" name="link" value="{{i.link}}">
+                <input type="hidden" name="uid" value="{{user.username}}">
+                <input type="hidden" name="avgp" value="{{i.avg_price}}">
+                <button type="submit" class="d-order">Order-now</button>
+            </form>
+            <div class="d-price">
+                <p class="price">cost for 2-{{i.avg_price}}</p>
+            </div>
+        </div>
+    </div> 
+    {% endfor %}  
+</body>
+</html>

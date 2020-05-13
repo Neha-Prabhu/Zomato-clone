@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %} ">
+	<title>Document</title>
+	<style>
+		body{
+			background-image: url("{% static 'images/homebg31.jpg' %}");
+		}
+		form{
+			border-radius:25px;
+			padding:10px;
+			width:300px;
+			background-color:rgba(252, 217, 61, 0.815);
+			color:white;
+			margin-top:50px;
+			margin-left:100px;
+		}
+		.form-head{
+			margin-left: 5px;
+		}
+		label{
+			padding:5px;
+						
+		}
+		input{
+			padding:5px;
+			margin:5px;
+			border:none;
+			height:25px;
+			width:275px;
+			background-color:rgba(253, 253, 253, 0.534);
+			color: black;
+		}
+		button{
+			padding:5px;
+			margin:5px;
+			background-color:white;
+			color:rgba(5, 6, 7, 0.67);
+			border:none;
+			height:35px;
+			width:275px;
+			text-align: center;
+			border-radius: 50px;
+		
+		}
+		
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="nav-item">
+			<div class="logo">Bon-Appetit</div>
+			<div class="nav-links">
+				<a class="nav-item-links" href="index.html">ABOUT US|</a>
+				<a class="nav-item-links" href="homepage.html">HOMEPAGE|</a>
+				<a class="nav-item-links" href="login">LOGIN|</a>
+				<a class="nav-item-links" href="newregistration">REGISTER|</a>				
+			</div>
+		</div>
+	</nav>
+</body>
+</html>

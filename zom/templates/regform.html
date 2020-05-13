@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>From</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/form.css' %}">
+		<style>
+			body{
+				background-image: url( "{% static 'images/zomato3.jpeg' %}");
+			}
+		</style>
+	</head>
+	<body>
+		<form action="newregistration" method="post">
+			{% csrf_token %}
+			<h4 style="text-align:center">REGISTER TODAY!</h4>
+			<div class="error">
+					{% for msg in messages %}
+					<h5>*{{msg}}</h5>
+					{% endfor %}
+			</div>
+			<label><b>First Name:</b></label><br>
+			<input type="text" placeholder="FirstName" size="20" name="fname" required><br>
+			<label>Last Name:</label><br>
+			<input type="text" placeholder="LastName" size="20" name="lname"><br>
+			<label>Userid:</label><br>
+			<input type="text" placeholder="Userid" size="20" name="uid"required><br>
+			<label>Email:</label><br>
+			<input type="email" placeholder="Email-ID" name="email"required><br>
+			<label>Password:</label><br>
+			<input type="password" placeholder="Password" minsize="8" name="password1" required><br>
+			<label>Confirm Password:</label><br>
+			<input type="password" placeholder="Confirm Password" minsize="8" name="password2" required><br>
+			<label>Date of Birth:</label><br>
+			<input type="Date" placeholder="dob" name="dob" required><br><br>
+			<button type="submit">Submit details</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<title>From</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/form.css' %}">
+	</head>
+	<body style="background-image: url({% static 'images/zomato3.jpeg' %});">
+		<form action="reg" method="POST">
+			<h4 style="text-align:center">REGISTER</h4>
+			<label>Name:</label><br>
+			<input type="text" placeholder="Name" size="20" name="cname"><br>
+			<label>Userid:</label><br>
+			<input type="text" placeholder="Userid" size="20" name="uid"><br>
+			<label>Email:</label><br>
+			<input type="email" placeholder="Email-ID" name="email"><br>
+			<label>Password:</label><br>
+			<input type="password" placeholder="Password" minsize="8" name="password"><br>
+			<label>Date of Birth:</label><br>
+			<input type="Date" placeholder="dob" name="dob"><br><br>
+			<button type="submit">Submit details</button>
+		</form>
+	</body>
+</html>
